@@ -1,0 +1,16 @@
+{
+    "go.goroot": "/usr/local/go/",
+    "go.gopath": "/Users/home/go/",
+    "go.toolsEnvVars": {
+        "GOOS": "js",
+        "GOARCH": "wasm"
+    },
+    "go.testEnvVars": {
+        "GOOS": "darwin",
+        "GOARCH": "amd64",
+        "VSOP87": "http://localhost:4200/assets/",
+        "GOFLAGS": "-count=1",
+        "GOMAXPROCS": "7"
+    },
+    "go.testFlags": ["-v"]
+}

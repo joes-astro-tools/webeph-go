@@ -1,0 +1,19 @@
+{
+    "name": "webeph",
+    "version": "0.3.0",
+    "description": "A WebAssembly ephemeris written in Go",
+    "scripts": {
+        "build": "tinygo build -o ../assets/weph-tinygo.wasm -target=wasm -gc=none -scheduler=none -no-debug -panic=trap ./eph.go && node /Users/home/wat-wasm/bin/wasm2wat ../assets/weph-tinygo.wasm tinygo.wat && node /Users/home/wat-wasm/bin/watwasm ../assets/weph-tinygo.wat -o ../assets/weph-tinygo.wasm -O3 && rm ../assets/weph-tinygo.wat",
+        "grunt-build": "cd ./grunt && tsc",
+        "grunt-run": "cd ./grunt/bin && grunt",
+        "profile-build": "go build profile.go",
+        "profile-run": "./profile && go tool pprof -pdf -output cgraph.pdf ./profile cpu.pprof"
+    },
+    "author": "Dolios Software",
+    "devDependencies": {
+        "@types/grunt": "^0.4.27",
+        "binaryen": "^105.0.0",
+        "grunt": "^1.4.1",
+        "grunt-exec": "^3.0.0"
+    }
+}

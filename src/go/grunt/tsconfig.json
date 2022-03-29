@@ -1,0 +1,12 @@
+{
+    "extends": "../../../tsconfig.json",
+    "compilerOptions": {
+        "module": "CommonJS",
+        "sourceMap": false,
+        "typeRoots": [
+            "../node_modules/@types"
+        ],
+        "outDir": "./bin"
+    },
+    "exclude": []
+}
